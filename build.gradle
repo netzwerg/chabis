@@ -1,0 +1,20 @@
+plugins {
+    id 'ch.netzwerg.release' version '1.1.0'
+}
+
+apply plugin: 'java'
+
+group = 'ch.netzwerg'
+
+allprojects {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
