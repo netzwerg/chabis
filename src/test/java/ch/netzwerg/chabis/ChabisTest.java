@@ -10,9 +10,11 @@ import static org.junit.Assert.assertEquals;
 
 public class ChabisTest {
 
+    private static final Random RANDOM = new Random(42);
+
     @Test
-    public void words() {
-        assertEquals(Chabis.WORD_COUNT, Chabis.words().size());
+    public void oneThousandWords() {
+        assertEquals(1000, Chabis.ALL_WORDS.size());
     }
 
     @Test
@@ -22,9 +24,21 @@ public class ChabisTest {
 
     @Test
     public void deterministicRandomWords() {
-        Random random = new Random(999);
-        List<String> randomWords = Chabis.randomWords(random, 3);
-        assertEquals(Arrays.asList("Grittibänz", "Chuttä", "Güsel"), randomWords);
+        List<String> randomWords = Chabis.randomWords(RANDOM, 3);
+        assertEquals(Arrays.asList("Büülä", "Schnoderbueb", "Döller" ), randomWords);
+    }
+
+    @Test
+    public void uniqueRandomWords() {
+        assertEquals(333, Chabis.uniqueRandomWords(333).size());
+    }
+
+    @Test
+    public void deterministicUniqueRandomWords() {
+        List<String> words = Chabis.uniqueRandomWords(RANDOM, 333);
+        assertEquals(333, words.size());
+        assertEquals(333, words.stream().distinct().count());
+        assertEquals(Arrays.asList("Gonfi", "Manzälä", "Läufterli" ), Chabis.uniqueRandomWords(RANDOM, 3));
     }
 
 }
