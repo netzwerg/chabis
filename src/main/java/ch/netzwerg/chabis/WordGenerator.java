@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 
-public final class Chabis {
+public final class WordGenerator {
 
     public static final List<String> A_WORDS = ImmutableList.of(
             "Aabee",
@@ -1101,11 +1101,11 @@ public final class Chabis {
 
     private final Random random;
 
-    public Chabis() {
+    public WordGenerator() {
         this(new Random());
     }
 
-    public Chabis(Random random) {
+    public WordGenerator(Random random) {
         this.random = random;
     }
 
