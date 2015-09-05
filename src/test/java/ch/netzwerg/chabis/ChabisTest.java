@@ -19,7 +19,7 @@ public class ChabisTest {
 
     @Test
     public void randomWords() {
-        assertEquals(333, Chabis.randomWords(333).size());
+        assertEquals(333, new Chabis().randomWords(333).size());
     }
 
     @Test
@@ -30,7 +30,7 @@ public class ChabisTest {
 
     @Test
     public void uniqueRandomWords() {
-        assertEquals(333, Chabis.uniqueRandomWords(333).size());
+        assertEquals(333, new Chabis().uniqueRandomWords(333).size());
     }
 
     @Test

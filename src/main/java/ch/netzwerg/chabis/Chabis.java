@@ -1099,18 +1099,27 @@ public final class Chabis {
             addAll(Y_WORDS).
             addAll(Z_WORDS).build();
 
+    private final Random random;
 
-    public static List<String> randomWords(int count) {
-        return randomWords(new Random(), count);
+    public Chabis() {
+        this(new Random());
+    }
+
+    public Chabis(Random random) {
+        this.random = random;
+    }
+
+    public List<String> randomWords(int count) {
+        return randomWords(this.random, count);
+    }
+
+    public List<String> uniqueRandomWords(int count) {
+        return uniqueRandomWords(this.random, count);
     }
 
     public static List<String> randomWords(Random random, int count) {
         IntStream randomIndices = IntStream.generate(() -> random.nextInt(ALL_WORDS.size())).limit(count);
         return randomIndices.mapToObj(ALL_WORDS::get).collect(toList());
-    }
-
-    public static List<String> uniqueRandomWords(int count) {
-        return uniqueRandomWords(new Random(), count);
     }
 
     public static List<String> uniqueRandomWords(Random random, int count) {
