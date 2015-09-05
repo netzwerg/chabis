@@ -3,6 +3,7 @@ plugins {
 }
 
 apply plugin: 'java'
+apply plugin: 'maven-publish'
 
 group = 'ch.netzwerg'
 
@@ -18,4 +19,17 @@ repositories {
 dependencies {
     compile 'com.google.guava:guava:18.0'
     testCompile 'junit:junit:4.12'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            mavenLocal()
+        }
+    }
 }
