@@ -1,10 +1,14 @@
-# Chabis
+package ch.netzwerg.chabis;
 
-A curated list of 1000 swiss-german test strings (extracted from [dialektwoerter.ch](http://dialektwoerter.ch/)).
+import org.junit.Before;
+import org.junit.Test;
 
-# Demo Usage
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
-```java
+import static org.junit.Assert.assertEquals;
+
 public class DemoTest {
 
     private WordGenerator wordGenerator;
@@ -21,9 +25,3 @@ public class DemoTest {
     }
 
 }
-```
-# License
-
-This is free and unencumbered software released into the public domain (see [unlicense.org](http://unlicense.org/)).
-
-Rahel Lüthy, 2015
