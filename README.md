@@ -1,4 +1,5 @@
-# Chabis
+# Chabis [![Build Status](https://travis-ci.org/netzwerg/chabis.svg?branch=master)](https://travis-ci.org/netzwerg/chabis) [ ![Download](https://api.bintray.com/packages/netzwerg/maven/chabis/images/download.svg) ](https://bintray.com/netzwerg/maven/chabis/_latestVersion)
+
 
 A curated list of 1000 swiss-german test strings (extracted from [dialektwoerter.ch](http://dialektwoerter.ch/)).
 
