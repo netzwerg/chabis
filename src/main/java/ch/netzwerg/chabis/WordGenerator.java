@@ -1109,6 +1109,10 @@ public final class WordGenerator {
         this.random = random;
     }
 
+    public String randomWord() {
+        return randomWord(this.random);
+    }
+
     public List<String> randomWords(int count) {
         return randomWords(this.random, count);
     }
@@ -1117,8 +1121,12 @@ public final class WordGenerator {
         return uniqueRandomWords(this.random, count);
     }
 
+    public static String randomWord(Random random) {
+        return ALL_WORDS.get(randomIndex(random));
+    }
+
     public static List<String> randomWords(Random random, int count) {
-        IntStream randomIndices = IntStream.generate(() -> random.nextInt(ALL_WORDS.size())).limit(count);
+        IntStream randomIndices = IntStream.generate(() -> randomIndex(random)).limit(count);
         return randomIndices.mapToObj(ALL_WORDS::get).collect(toList());
     }
 
@@ -1132,6 +1140,10 @@ public final class WordGenerator {
             Collections.shuffle(words, random);
             return words.subList(0, count);
         }
+    }
+
+    private static int randomIndex(Random random) {
+        return random.nextInt(ALL_WORDS.size());
     }
 
 }
