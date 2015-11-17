@@ -1,14 +1,13 @@
 package ch.netzwerg.chabis;
 
+import javaslang.collection.Array;
+import javaslang.collection.Stream;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class WordGeneratorTest {
 
@@ -21,7 +20,7 @@ public class WordGeneratorTest {
 
     @Test
     public void oneThousandWords() {
-        assertEquals(1000, WordGenerator.ALL_WORDS.size());
+        assertEquals(1000, WordGenerator.ALL_WORDS.length());
     }
 
     @Test
@@ -36,26 +35,26 @@ public class WordGeneratorTest {
 
     @Test
     public void randomWords() {
-        assertEquals(333, new WordGenerator().randomWords(333).size());
+        assertEquals(333, new WordGenerator().randomWords(333).length());
     }
 
     @Test
     public void deterministicRandomWords() {
-        List<String> randomWords = WordGenerator.randomWords(this.random, 3);
-        assertEquals(Arrays.asList("Büülä", "Schnoderbueb", "Döller" ), randomWords);
+        Stream<String> randomWords = WordGenerator.randomWords(this.random, 3);
+        assertTrue(Array.ofAll("Büülä", "Schnoderbueb", "Döller").eq(randomWords));
     }
 
     @Test
     public void uniqueRandomWords() {
-        assertEquals(333, new WordGenerator().uniqueRandomWords(333).size());
+        assertEquals(333, new WordGenerator().uniqueRandomWords(333).length());
     }
 
     @Test
     public void deterministicUniqueRandomWords() {
-        List<String> words = WordGenerator.uniqueRandomWords(this.random, 333);
-        assertEquals(333, words.size());
-        assertEquals(333, words.stream().distinct().count());
-        assertEquals(Arrays.asList("Mutz", "Schroppä", "Kösi" ), WordGenerator.uniqueRandomWords(this.random, 3));
+        Stream<String> words = WordGenerator.uniqueRandomWords(this.random, 333);
+        assertEquals(333, words.length());
+        assertEquals(333, words.distinct().length());
+        assertTrue(Array.ofAll("Mutz", "Schroppä", "Kösi").eq(WordGenerator.uniqueRandomWords(this.random, 3)));
     }
 
 }

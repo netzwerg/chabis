@@ -1,18 +1,14 @@
 package ch.netzwerg.chabis;
 
-import com.google.common.collect.ImmutableList;
+import javaslang.collection.Stream;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Random;
-import java.util.stream.IntStream;
-
-import static java.util.stream.Collectors.toList;
 
 public final class WordGenerator {
 
-    public static final List<String> A_WORDS = ImmutableList.of(
+    public static final Stream<String> A_WORDS = Stream.ofAll(
             "Aabee",
             "Aagoal",
             "Aahäueli",
@@ -35,7 +31,7 @@ public final class WordGenerator {
             "Ateiggär",
             "Ätti"
     );
-    public static final List<String> B_WORDS = ImmutableList.of(
+    public static final Stream<String> B_WORDS = Stream.ofAll(
             "Babä",
             "Baabeli",
             "Bääbi",
@@ -150,7 +146,7 @@ public final class WordGenerator {
             "Buzzimumäl",
             "Bygger"
     );
-    public static final List<String> C_WORDS = ImmutableList.of(
+    public static final Stream<String> C_WORDS = Stream.ofAll(
             "Chabis",
             "Chacheli",
             "Chädärätä",
@@ -259,7 +255,7 @@ public final class WordGenerator {
             "Chuuschtofä",
             "Chuzämischt"
     );
-    public static final List<String> D_WORDS = ImmutableList.of(
+    public static final Stream<String> D_WORDS = Stream.ofAll(
             "Dächlichappä",
             "Dachchännel",
             "Dädi",
@@ -281,15 +277,15 @@ public final class WordGenerator {
             "Dütschi",
             "Dyridäri"
     );
-    public static final List<String> E_WORDS = ImmutableList.of(
+    public static final Stream<String> E_WORDS = Stream.ofAll(
             "Eignä",
             "Eieröhrli",
             "Eierschwamm",
             "Eiertätsch",
             "Eschtrich",
-            "Etro" );
+            "Etro");
 
-    public static final List<String> F_WORDS = ImmutableList.of(
+    public static final Stream<String> F_WORDS = Stream.ofAll(
             "Fagetta",
             "Fagettazyt",
             "Fassduube",
@@ -323,7 +319,7 @@ public final class WordGenerator {
             "Füürstei"
     );
 
-    public static final List<String> G_WORDS = ImmutableList.of(
+    public static final Stream<String> G_WORDS = Stream.ofAll(
             "Gacho",
             "Gadä",
             "Gaggalari",
@@ -458,7 +454,7 @@ public final class WordGenerator {
             "Güürbschi"
     );
 
-    public static final List<String> H_WORDS = ImmutableList.of("Haag",
+    public static final Stream<String> H_WORDS = Stream.ofAll("Haag",
             "Haaghuuri",
             "Habasch",
             "Habä",
@@ -538,11 +534,11 @@ public final class WordGenerator {
             "Hürbi",
             "Hüsli",
             "Hüttä",
-            "Hüänerhuut" );
+            "Hüänerhuut");
 
-    public static final List<String> I_WORDS = ImmutableList.of("Ilge", "Imbi" );
+    public static final Stream<String> I_WORDS = Stream.ofAll("Ilge", "Imbi");
 
-    public static final List<String> J_WORDS = ImmutableList.of(
+    public static final Stream<String> J_WORDS = Stream.ofAll(
             "Joggel",
             "Juuchzer",
             "Jännär",
@@ -550,7 +546,7 @@ public final class WordGenerator {
             "Jüntli"
     );
 
-    public static final List<String> K_WORDS = ImmutableList.of(
+    public static final Stream<String> K_WORDS = Stream.ofAll(
             "Kischtär",
             "Komodä",
             "Kremänzer",
@@ -561,7 +557,7 @@ public final class WordGenerator {
             "Kösi"
     );
 
-    public static final List<String> L_WORDS = ImmutableList.of(
+    public static final Stream<String> L_WORDS = Stream.ofAll(
             "Laabata",
             "Laarvä",
             "Lafäri",
@@ -592,7 +588,7 @@ public final class WordGenerator {
             "Lüürlibrüe"
     );
 
-    public static final List<String> M_WORDS = ImmutableList.of(
+    public static final Stream<String> M_WORDS = Stream.ofAll(
             "Maad",
             "Maanu",
             "Magerlieni",
@@ -643,7 +639,7 @@ public final class WordGenerator {
             "Müüs"
     );
 
-    public static final List<String> N_WORDS = ImmutableList.of(
+    public static final Stream<String> N_WORDS = Stream.ofAll(
             "Nagwer",
             "Nani",
             "Nastüechli",
@@ -670,9 +666,9 @@ public final class WordGenerator {
             "Nüüteli"
     );
 
-    public static final List<String> O_WORDS = ImmutableList.of("Obenigadä", "Oelstiirzli", "Ordinäri" );
+    public static final Stream<String> O_WORDS = Stream.ofAll("Obenigadä", "Oelstiirzli", "Ordinäri");
 
-    public static final List<String> P_WORDS = ImmutableList.of(
+    public static final Stream<String> P_WORDS = Stream.ofAll(
             "Paggu",
             "Pajass",
             "Palka",
@@ -730,14 +726,14 @@ public final class WordGenerator {
             "Pünt"
     );
 
-    public static final List<String> Q_WORDS = ImmutableList.of(
+    public static final Stream<String> Q_WORDS = Stream.ofAll(
             "Quaaki",
             "Quadradsploderi",
             "Quaksalber",
             "Quärtli"
     );
 
-    public static final List<String> R_WORDS = ImmutableList.of(
+    public static final Stream<String> R_WORDS = Stream.ofAll(
             "Rafä",
             "Rampas",
             "Randä",
@@ -773,7 +769,7 @@ public final class WordGenerator {
             "Rüäbli"
     );
 
-    public static final List<String> S_WORDS = ImmutableList.of(
+    public static final Stream<String> S_WORDS = Stream.ofAll(
             "Salaathäuptli",
             "Samichlaus",
             "Schaalä",
@@ -938,7 +934,7 @@ public final class WordGenerator {
             "Süüli"
     );
 
-    public static final List<String> T_WORDS = ImmutableList.of(
+    public static final Stream<String> T_WORDS = Stream.ofAll(
             "Tablar",
             "Taburettli",
             "Tampa",
@@ -996,7 +992,8 @@ public final class WordGenerator {
             "Tütschi",
             "Tüürfallä"
     );
-    public static final List<String> U_WORDS = ImmutableList.of(
+
+    public static final Stream<String> U_WORDS = Stream.ofAll(
             "Umbeisgi",
             "Unertiner",
             "Ungfell",
@@ -1008,7 +1005,7 @@ public final class WordGenerator {
             "Uufwäschluderä"
     );
 
-    public static final List<String> V_WORDS = ImmutableList.of(
+    public static final Stream<String> V_WORDS = Stream.ofAll(
             "Velo",
             "Versuecherli",
             "Viärlig",
@@ -1016,7 +1013,7 @@ public final class WordGenerator {
             "Vörtuech"
     );
 
-    public static final List<String> W_WORDS = ImmutableList.of(
+    public static final Stream<String> W_WORDS = Stream.ofAll(
             "Waggis",
             "Waggu",
             "Wank",
@@ -1035,11 +1032,11 @@ public final class WordGenerator {
             "Wümmät"
     );
 
-    public static final List<String> X_WORDS = ImmutableList.of("Xundheit" );
+    public static final Stream<String> X_WORDS = Stream.ofAll("Xundheit");
 
-    public static final List<String> Y_WORDS = ImmutableList.of("Ygrek" );
+    public static final Stream<String> Y_WORDS = Stream.ofAll("Ygrek");
 
-    public static final List<String> Z_WORDS = ImmutableList.of(
+    public static final Stream<String> Z_WORDS = Stream.ofAll(
             "Zainä",
             "Zapfä",
             "Zappi",
@@ -1071,33 +1068,33 @@ public final class WordGenerator {
             "Züpfä"
     );
 
-    public static final List<String> ALL_WORDS = ImmutableList.<String>builder().
-            addAll(A_WORDS).
-            addAll(B_WORDS).
-            addAll(C_WORDS).
-            addAll(D_WORDS).
-            addAll(E_WORDS).
-            addAll(F_WORDS).
-            addAll(G_WORDS).
-            addAll(H_WORDS).
-            addAll(I_WORDS).
-            addAll(J_WORDS).
-            addAll(K_WORDS).
-            addAll(L_WORDS).
-            addAll(M_WORDS).
-            addAll(N_WORDS).
-            addAll(O_WORDS).
-            addAll(P_WORDS).
-            addAll(Q_WORDS).
-            addAll(R_WORDS).
-            addAll(S_WORDS).
-            addAll(T_WORDS).
-            addAll(U_WORDS).
-            addAll(V_WORDS).
-            addAll(W_WORDS).
-            addAll(X_WORDS).
-            addAll(Y_WORDS).
-            addAll(Z_WORDS).build();
+    public static final Stream<String> ALL_WORDS = Stream.<String>empty().
+            appendAll(A_WORDS).
+            appendAll(B_WORDS).
+            appendAll(C_WORDS).
+            appendAll(D_WORDS).
+            appendAll(E_WORDS).
+            appendAll(F_WORDS).
+            appendAll(G_WORDS).
+            appendAll(H_WORDS).
+            appendAll(I_WORDS).
+            appendAll(J_WORDS).
+            appendAll(K_WORDS).
+            appendAll(L_WORDS).
+            appendAll(M_WORDS).
+            appendAll(N_WORDS).
+            appendAll(O_WORDS).
+            appendAll(P_WORDS).
+            appendAll(Q_WORDS).
+            appendAll(R_WORDS).
+            appendAll(S_WORDS).
+            appendAll(T_WORDS).
+            appendAll(U_WORDS).
+            appendAll(V_WORDS).
+            appendAll(W_WORDS).
+            appendAll(X_WORDS).
+            appendAll(Y_WORDS).
+            appendAll(Z_WORDS);
 
     private final Random random;
 
@@ -1113,11 +1110,11 @@ public final class WordGenerator {
         return randomWord(this.random);
     }
 
-    public List<String> randomWords(int count) {
+    public Stream<String> randomWords(int count) {
         return randomWords(this.random, count);
     }
 
-    public List<String> uniqueRandomWords(int count) {
+    public Stream<String> uniqueRandomWords(int count) {
         return uniqueRandomWords(this.random, count);
     }
 
@@ -1125,25 +1122,25 @@ public final class WordGenerator {
         return ALL_WORDS.get(randomIndex(random));
     }
 
-    public static List<String> randomWords(Random random, int count) {
-        IntStream randomIndices = IntStream.generate(() -> randomIndex(random)).limit(count);
-        return randomIndices.mapToObj(ALL_WORDS::get).collect(toList());
+    public static Stream<String> randomWords(Random random, int count) {
+        return Stream.gen(() -> randomIndex(random)).take(count).map(ALL_WORDS::get);
     }
 
-    public static List<String> uniqueRandomWords(Random random, int count) {
-        if (count >= ALL_WORDS.size()) {
-            throw new IllegalArgumentException("Can maximally return " + ALL_WORDS.size() + " unique words" );
+    public static Stream<String> uniqueRandomWords(Random random, int count) {
+        // TODO: Use javaslang Gen/Arbitrary
+        if (count >= ALL_WORDS.length()) {
+            throw new IllegalArgumentException("Can maximally return " + ALL_WORDS.length() + " unique words");
         } else if (count <= 0) {
-            return Collections.emptyList();
+            return Stream.empty();
         } else {
-            List<String> words = new ArrayList<>(ALL_WORDS);
+            java.util.List<String> words = new ArrayList<>(ALL_WORDS.toJavaList());
             Collections.shuffle(words, random);
-            return words.subList(0, count);
+            return Stream.ofAll(words.subList(0, count));
         }
     }
 
     private static int randomIndex(Random random) {
-        return random.nextInt(ALL_WORDS.size());
+        return random.nextInt(ALL_WORDS.length());
     }
 
 }

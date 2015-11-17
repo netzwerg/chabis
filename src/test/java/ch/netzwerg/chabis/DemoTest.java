@@ -1,10 +1,10 @@
 package ch.netzwerg.chabis;
 
+import javaslang.collection.Stream;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
@@ -20,8 +20,8 @@ public class DemoTest {
 
     @Test
     public void demo() {
-        List<String> words = this.wordGenerator.randomWords(3);
-        assertEquals(Arrays.asList("Büülä", "Schnoderbueb", "Döller"), words);
+        Stream<String> words = this.wordGenerator.randomWords(3);
+        assertEquals(Arrays.asList("Büülä", "Schnoderbueb", "Döller"), words.toJavaList());
     }
 
 }

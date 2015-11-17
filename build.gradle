@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.guava:guava:18.0'
+    compile 'com.javaslang:javaslang:2.0.0-RC1'
     testCompile 'junit:junit:4.12'
 }
 
